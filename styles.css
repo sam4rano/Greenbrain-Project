@@ -1,11 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+
 body {
     background-image: radial-gradient(circle, #dff0d8, #dbf6ee, #e5f9fd, #f5fbff, #ffffff);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+.navsection, .d-flex {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+/*animate css*/
+.img-fluid {
+  display: inline-block;
+  margin: 0 0.5rem;
 
-
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration:infinity; /* don't forget to set a duration! */
+  animation-iteration-count: 3;
+}
 /*about section*/
 
 .about {
@@ -86,20 +103,81 @@ ul {
     list-style-type: none;
     font-weight: bold;
 }
+/*.btn-1 {
+  background-color: #219988;
 
-.btn-1 {
-    display: inline-block;
-    padding: 3% 6%;
-    text-decoration: none;
-    background-color: #219988;
-    border-radius: 5px;
-    border: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 1.2rem;
-    margin-top: 2%;
+  color: white;
+  border-radius: 5px;
+  padding: 3% 6%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 2%;
+  font-size:500;
+
+}*/
+/*btn see more*/
+.btn-1 a {
+  border: none;
+  cursor: pointer;
+  outline:none;
+}
+a:link {
+  text-decoration: none;
 }
 
+.btn-1 a:visited {
+  text-decoration: none;
+}
+.btn-1 a:hover {
+  color: #00FFFF;
+  text-decoration: none;
+}
+.btn-1 {
+  background-color: #219988;
+}
+.btn-1:active:focus {
+  color: white !important;
+  background-color: #219988 !important;
+  border-color: #494F57;
+}
+.btn-1 a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+
+}
+/*btn upbutton*/
+.upbutton a {
+  border: none;
+  cursor: pointer;
+  outline:none;
+}
+a:link {
+  text-decoration: none;
+}
+
+.upbutton a:visited {
+  text-decoration: none;
+}
+.upbutton a:hover {
+  color: #00FFFF;
+  text-decoration: none;
+}
+.upbutton {
+  background-color: #219988;
+}
+.upbutton:active:focus {
+  color: white !important;
+  background-color: #219988 !important;
+  border-color: #494F57;
+}
+.upbutton a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
 
 /*productive items*/
 
@@ -248,10 +326,6 @@ a {
         padding: 1.2rem 1rem;
     }
 }
-
-
-/*landscape*/
-
 
 /*close mobile query*/
 
@@ -411,7 +485,20 @@ a:hover {
         margin-bottom: 1em;
     }
 }
+/*just added*/
+@media only screen and (max-width: 480px){
+  .quick-links {
+      width: 100%;
+      padding-top: 1em;
+      padding-bottom: 0.5em;
+      padding-left: 0.5em;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0.5em;
+      line-height: 1;
+  }
 
+}
 .quick-links {
     width: 100%;
     padding-top: 1em;
@@ -440,9 +527,15 @@ footer {
     background: linear-gradient(24deg, #40514e, #40514e 50%, #219988);
 }
 
-.ms {
+/*.ms {
     margin-left: 1em;
-}
+}*/
+@media only screen and (max-width: 480px) {
+    .ms {
+        display:inline-block;
+        margin-right:1em;
+        padding-right: 1em;
+    }
 
 .ms li a {
     text-decoration: none;
