@@ -123,6 +123,10 @@ ul {
   cursor: pointer;
   outline:none;
 }
+.ms a:hover {
+    color: #00FFFF;
+    text-decoration: none;
+  }
 a:link {
   text-decoration: none;
 }
