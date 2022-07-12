@@ -9,11 +9,16 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
-.navsection, .d-flex {
+.navsection {
   box-sizing: border-box;
-  margin:0;
-  padding:0;
+  margin:1rem;
+  padding:1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
 }
+
+
 /*animate css*/
 .img-fluid {
   display: inline-block;
@@ -73,7 +78,17 @@ body {
     color: black;
 }
 
+.quick-links {
+    display:flex;
+    margin: 1rem;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.ms-ul {
+    display:flex;
+    justify-content:space-between;
 
+}
 /*media query*/
 
 @media only screen and (max-width: 820px) {
@@ -285,6 +300,26 @@ a {
     .ptitle {
         font-size: 30px;
     }
+    .quick-links {
+        display:flex;
+        flex-direction:column;
+        margin:1rem;
+    }
+    .ms-ul {
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+    }
+    .social-connect {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center
+    }
+    .media {
+        display:flex;
+        flex-direction:row;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -328,6 +363,20 @@ a {
     }
     .productive-items>div.prodcon {
         padding: 1.2rem 1rem;
+    }
+
+    .navcon {
+        display:flex;
+        
+        justify-content: space-between;
+        align-items: center;
+    }
+    .img-fluid {
+        width:50%;
+    }
+    .quick-links {
+        display:flex;
+        flex-direction:column;
     }
 }
 
@@ -433,6 +482,7 @@ p {
     width: 100%;
     margin: 0 auto;
     background-color: #e4f9f5;
+    overflow:hidden;
 }
 
 .tex_01,
@@ -496,14 +546,16 @@ a:hover {
       padding-top: 1em;
       padding-bottom: 0.5em;
       padding-left: 0.5em;
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      /* display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 0.5em;
+      grid-gap: 0.5em; */
       line-height: 1;
   }
 
 }
-.quick-links {
+/* .quick-links {
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -511,7 +563,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
-}
+} */
 
 .cout {
     height: 20px;
@@ -531,16 +583,19 @@ footer {
     background: linear-gradient(24deg, #40514e, #40514e 50%, #219988);
 }
 
-/*.ms {
-    margin-left: 1em;
-}*/
 @media only screen and (max-width: 480px) {
     .ms {
         display:inline-block;
         margin-right:1em;
         padding-right: 1em;
     }
-
+    .img-fluid {
+        width:50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 .ms li a {
     text-decoration: none;
     color: #ffffff;
